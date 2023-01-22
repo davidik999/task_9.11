@@ -1,0 +1,24 @@
+body {
+     background-image: url(https://img.freepik.com/free-vector/illustration-vector-of-various-careers-and-professions_53876-2757.jpg?w=1380&t=st=1673475834~exp=1673476434~hmac=21cc9b665bd637fc5f297ce85752ec3ee91a7268f777afe4fff0a1766283032a);
+    background-repeat: no-repeat;
+     background-size:cover;
+     opacity: 0.8;
+    }
+
+.container {
+     margin-top: 350px;
+
+    }
+.btn {
+       background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
