@@ -1,171 +1,161 @@
 const personGenerator = {
-    personData: {
-        surnameJson: {  
-            "count": 15,
-            "list": [
-                "Иванов",
-                "Смирнов",
-                "Кузнецов",
-                "Васильев",
-                "Петров",
-                "Михайлов",
-                "Новиков",
-                "Федоров",
-                "Кравцов",
-                "Николаев",
-                "Семёнов",
-                "Славин",
-                "Степанов",
-                "Павлов",
-                "Александров",
-                "Морозов"
-            ]
-        },
 
-        patronimicJson: {
-            "count": 10,
-            "list": [    
-                "Александро",
-                "Максимо",
-                "Ивано",
-                "Артемо",
-                "Дмитрие",
-                "Никито",
-                "Михаило",
-                "Даниило",
-                "Егоро",
-                "Андрее"
-            ]
-        },
+    surnameJson: `{  
+        "count": 15,
+        "list": {
+            "id_1": "Иванов",
+            "id_2": "Смирнов",
+            "id_3": "Кузнецов",
+            "id_4": "Васильев",
+            "id_5": "Петров",
+            "id_6": "Михайлов",
+            "id_7": "Новиков",
+            "id_8": "Федоров",
+            "id_9": "Кравцов",
+            "id_10": "Николаев",
+            "id_11": "Семёнов",
+            "id_12": "Славин",
+            "id_13": "Степанов",
+            "id_14": "Павлов",
+            "id_15": "Александров",
+            "id_16": "Морозов"
+        }
+    }`,
 
-        firstNameMaleJson: {
-            "count": 10,
-            "list": [    
-                "Александр",
-                "Максим",
-                "Иван",
-                "Артем",
-                "Дмитрий",
-                "Никита",
-                "Михаил",
-                "Даниил",
-                "Егор",
-                "Андрей"
-            ]
-        },
+    firstNameMaleJson: `{
+        "count": 10,
+        "list": {     
+            "id_1": "Александр",
+            "id_2": "Максим",
+            "id_3": "Иван",
+            "id_4": "Артем",
+            "id_5": "Дмитрий",
+            "id_6": "Никита",
+            "id_7": "Михаил",
+            "id_8": "Даниил",
+            "id_9": "Егор",
+            "id_10": "Андрей"
+        }
+    }`,
 
-        firstNameFemaleJson: {
-            "count": 15,
-            "list": [    
-                "Ксения",
-                "Жанна",
-                "Анжела",
-                "Анастасия",
-                "Светлана",
-                "Диана",
-                "Изабелла",
-                "Юлия",
-                "Кристина",
-                "Елизавета",
-                "Cоня",
-                "Дарья",
-                "Мария",
-                "Ольга",
-                "Наталья",
-            ]
-        },
-        profession_male: {
-            "count": 15,
-            "list": [    
-                "Грузчик",
-                "Военный",
-                "Библиотекарь",
-                "Бизнесмен",
-                "Учитель",
-                "Слесарь",
-                "Пилот",
-                "Шеф-Повар",
-                "Дальнобойщик",
-                "Пограничник",
-                "Судья",
-                "Инспектор ДПС",
-                "Депутат",
-                "Безработный",
-                "Альфонс"
-            ]
-        },
-        profession_female: {
-            "count": 15,
-            "list": [    
-                "Грузчица",
-                "Военная",
-                "Библиотекарша",
-                "Бизнесменша",
-                "Учительница",
-                "Пилотесса",
-                "Повариха",
-                "Дальнобойщица",
-                "Пограничница",
-                "Судья",
-                "Инспекторша ДПС",
-                "Депутатша",
-                "Безработная",
-                "Содержанка"
-            ]
-        },
-    },
+    firstNameFemaleJson: `{
+        "count": 15,
+        "list": {     
+            "id_1": "Ксения",
+            "id_2": "Жанна",
+            "id_3": "Анжела",
+            "id_4": "Анастасия",
+            "id_5": "Светлана",
+            "id_6": "Диана",
+            "id_7": "Изабелла",
+            "id_8": "Юлия",
+            "id_9": "Кристина",
+            "id_10": "Елизавета",
+            "id_11": "Cоня",
+            "id_12": "Дарья",
+            "id_13": "Мария",
+            "id_14": "Ольга",
+            "id_15": "Наталья"
+        }
+    }`,
+    profession: `{
+        "count": 15,
+        "list": {     
+            "id_1": "Грузчик",
+            "id_2": "Военный",
+            "id_3": "Библиотекарь",
+            "id_4": "Бизнесмен",
+            "id_5": "Учитель",
+            "id_6": "Слесарь",
+            "id_7": "Пилот",
+            "id_8": "Шеф-Повар",
+            "id_9": "Дальнобойщик",
+            "id_10": "Пограничник",
+            "id_11": "Судья",
+            "id_12": "Инспектор ДПС",
+            "id_13": "Депутат",
+            "id_14": "Безработный",
+            "id_15": "Альфонс"
+        }
+    }`,
 
     GENDER_MALE: 'Мужчина',
     GENDER_FEMALE: 'Женщина',
-    
-    randomGender: function (){
-         return this.randomIntNumber () ? this.GENDER_FEMALE : this.GENDER_MALE;
+
+    randomGender: function () {
+        return this.randomIntNumber() ? this.GENDER_FEMALE : this.GENDER_MALE;
     },
 
     randomIntNumber: (max = 1, min = 0) => Math.floor(Math.random() * (max - min + 1) + min),
 
-    randomPatronimic: function (json, gender) {
+
+    randomValue: function (json) {
         const obj = JSON.parse(json);
-        let patr = this.randomValue(obj.patronimicJson);
+        const prop = `id_${this.randomIntNumber(obj.count, 1)}`; // this = personGenerator
+        return obj.list[prop];
+    },
+
+    randomPatronimic: function (gender) {
+        let name = this.randomValue(this.firstNameMaleJson);
         if (gender == "Женщина") {
-           return  patr + 'вна';
+            if (name[name.length - 1] == 'й') {
+                name = name.substring(0, name.length - 1);
+                return name + 'евна';
+            } else if (name[name.length - 1] == 'а') {
+                name = name.substring(0, name.length - 1);
+                return name + 'овна';
+            } else {
+                return name + 'овна';
+            }
         } else {
-           return patr + 'вич';
+            if (name[name.length - 1] == 'й') {
+                name = name.substring(0, name.length - 1);
+                return name + 'евич';
+            } else if (name[name.length - 1] == 'а') {
+                name = name.substring(0, name.length - 1);
+                return name + 'ович';
+            } else {
+                return name + 'ович';
+            }
         }
     },
 
-    randomValue: function(items){
-        return items.list[Math.floor(Math.random()*items.list.length)];
-    },
+    // randomValue: function(items){
+    //     return items.list[Math.floor(Math.random()*items.list.length)];
+    // },
 
-    randomFirstName: function(gender) {
-      if (gender == "Женщина") {
-           return (this.randomValue(this.personData.firstNameFemaleJson));
+    randomFirstName: function (gender) {
+        if (gender == "Женщина") {
+            return (this.randomValue(this.firstNameFemaleJson));
         } else {
-           return (this.randomValue(this.personData.firstNameMaleJson));
-      }
-      
-    },
-       
+            return (this.randomValue(this.firstNameMaleJson));
+        }
 
-    randomSurname: function(gender) {
-         if (gender == "Женщина") {
-           return ((this.randomValue(this.personData.surnameJson)) + "а");
+    },
+
+
+    randomSurname: function (gender) {
+        if (gender == "Женщина") {
+            return ((this.randomValue(this.surnameJson)) + "а");
         } else {
-           return (this.randomValue(this.personData.surnameJson));
-      }
+            return (this.randomValue(this.surnameJson));
+        }
     },
 
-    randomProfession: function(gender) {
-      if (gender == "Женщина") {
-           return (this.randomValue(this.personData.profession_female));
+    randomProfession: function (gender) {
+        if (gender == "Женщина") {
+            const forbiden = ["Грузчик", "Военный", "Слесарь", "Дальнобойщик", "Безработный", "Альфонс"];
+            let prof = this.randomValue(this.profession);
+            while (forbiden.includes(prof))
+                prof = this.randomValue(this.profession);
+            return prof;
         } else {
-           return (this.randomValue(this.personData.profession_male));
-      }
-      
+            return (this.randomValue(this.profession));
+        }
+
     },
 
-    randomDate:function(year) {
+    randomDate: function (year) {
         let start = new Date(year, 0, 1);
         let end = new Date(year, 11, 31);
         return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -174,24 +164,24 @@ const personGenerator = {
 
     getPerson: function () {
         const months = [
-           'Января',
-           'Февраля',
-           'Марта',
-           'Апреля',
-           'Мая',
-           'Июня',
-           'Июля',
-           'Августа',
-           'Сентября',
-           'Октября',
-           'Ноября',
-           'Декабря',
+            'Января',
+            'Февраля',
+            'Марта',
+            'Апреля',
+            'Мая',
+            'Июня',
+            'Июля',
+            'Августа',
+            'Сентября',
+            'Октября',
+            'Ноября',
+            'Декабря',
         ];
         person = {};
         person.gender = this.randomGender();
         person.firstName = this.randomFirstName(person.gender);
         person.surname = this.randomSurname(person.gender);
-        person.patronymic = this.randomPatronimic(JSON.stringify(this.personData), person.gender);
+        person.patronymic = this.randomPatronimic(person.gender);
         let year = this.randomIntNumber(1960, 2000);
         let date = this.randomDate(year);
         person.year = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();

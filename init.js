@@ -12,7 +12,13 @@ window.onload = function()
     document.getElementById('professionOutput').innerText = initPerson.profession;
 
     button.addEventListener("click", (event) => {
-        location.reload()
+        let initPerson = personGenerator.getPerson();
+        document.getElementById('firstNameOutput').innerText = initPerson.firstName;
+        document.getElementById('surnameOutput').innerText = initPerson.surname;
+        document.getElementById('patronymicOutput').innerText = initPerson.patronymic;
+        document.getElementById('genderOutput').innerText = initPerson.gender;
+        document.getElementById('birthYearOutput').innerText = initPerson.year;
+        document.getElementById('professionOutput').innerText = initPerson.profession;
     })  
 
     button2.addEventListener("click", (event) => {
@@ -26,3 +32,7 @@ window.onload = function()
 };
 
 
+
+
+ 
+ 
